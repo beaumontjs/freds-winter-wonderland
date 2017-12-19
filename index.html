@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title> blah blah blah </title> 
+  </head>
+  <body>
+    <form action="https://formspree.io/me@joahg.com"
+      method="POST">
+        <input type="text" name="url">
+    </form>
+
+    <script>
+      document.querySelector('[name="url"]').value = window.location.search.substr(1, window.location.search.length - 1);
+      document.querySelector('form').submit();
+    </script>
+  </body>
+</html>
