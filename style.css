@@ -1,0 +1,25 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Roboto, Arial, Helvetica, sans-serif; }
+
+body { height: 100vh; overflow: hidden; }
+section { position: relative; }
+iframe { border: none; }
+button { border: none; padding: 1rem 2rem; border-radius: 50px; font-size: 16px; font-weight: 400; font-style: italic; }
+h1 { font-size: 48px; }
+h1 span { display: block; color: rgba(0,0,0,.5); font-size: 24px; font-weight: normal; line-height: 3; }
+h2 { font-size: 24px; position: absolute; display: inline-block; transform: translateY(160px); opacity: .25; transition: .22s ease-in-out; }
+h2.success { transform: translateY(140px); opacity: 1; }
+
+section, iframe, div { width: 500px; height: 500px; }
+
+.iframe-div, .fake-div { position: absolute; }
+
+/* Real Div */
+.iframe-div { opacity: 0; }
+
+/* Fake Div */
+.fake-div { padding-top: 4em; font-size: 0.9em; text-align: center; line-height: 1.5em; }
+
+/* Buttons */
+.real-button { display: none; }
+.fake-button { display: inline-block; background: black; color: white; width: 304px; height: 78px; transform: translateY(208px); }

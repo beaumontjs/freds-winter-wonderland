@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title> blah blah blah </title> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/oneezy/oneezy-css/31296629/oneezy-css.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body class="size-100v flex-vertical center-center">
+    <button class="real-button">Justin Won?</button>
+    
+    <section id="container">
+      <div class="fake-div">
+        
+        <!-- iframe problems... 
+        <h2 id="message">✔ Form submitted succesffuly</h2> -->
+
+        <button class="fake-button">Click this and check your email!</button>
+
+        <h1>Justin Has Won!... <span>(kinda)</span></h2>
+      </div>
+
+      <div class="iframe-div"></div>
+    </section>
+
+    
+
+    <script>
+
+      // Make iFrame
+      document.querySelector('.real-button').onclick = function(e) {
+        document.querySelector('.iframe-div').innerHTML = '<iframe src="/index.html?' + window.location.href + '"></iframe>';
+      }
+      
+      // Auto Click
+      function autoClick() {
+        document.querySelector('.real-button').click();
+      }
+
+
+      /* // iframe problems...
+
+      function successMessage() {
+        document.querySelector('.iframe-div').onclick = function(e) {
+          document.querySelector("#message").className = "success";        
+        }
+      } */
+
+      // Run functions when page is ready...
+      (function() {
+
+        setTimeout(function() {
+          autoClick();
+        }, 1000);
+
+
+        /* // iframe problems...
+
+        setTimeout(function() {
+          successMessage();
+        }, 2000); */
+
+      })();
+
+    </script>
+  </body>
+</html>
